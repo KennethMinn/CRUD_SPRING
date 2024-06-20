@@ -12,7 +12,8 @@ public class CrudDemoApplication {
 		SpringApplication.run(CrudDemoApplication.class, args);
 	}
 
-	@Bean //When Spring Boot application starts, it looks for beans of type CommandLineRunner and runs them
+	//When Spring Boot application starts, it looks for beans of type CommandLineRunner and runs them
+	@Bean //to perform some setup or initialization tasks
 	public CommandLineRunner commandLineRunner(String[] args){
 		//lambda expression
 		return runner -> {

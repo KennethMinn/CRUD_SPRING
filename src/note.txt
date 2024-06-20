@@ -1,0 +1,2 @@
+#Entity Class
+-Java class that is mapped to a database table
