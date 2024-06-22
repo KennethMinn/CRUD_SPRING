@@ -22,6 +22,8 @@ public class Student {
 
     //define constructors - must define no argument constructor
     public Student() {}
+
+    //argument constructor is to perform create/save feature - no need id when create
     public Student(String firstName, String lastName, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -29,7 +31,6 @@ public class Student {
     }
 
     //define getters/setters
-
     public int getId() {
         return id;
     }
@@ -63,7 +64,6 @@ public class Student {
     }
 
     //define toString() method
-
     @Override
     public String toString() {
         return "Student{" +

@@ -19,8 +19,13 @@ public class StudentDAOImpl implements StudentDAO{
     }
 
     @Override
-    @Transactional// Ensures that the save operation is executed within a transaction. If any exception occurs, the transaction will be rolled back.
+    @Transactional //for mutation - invalidate the db
     public void save(Student theStudent) {
         this.entityManger.persist(theStudent);//saves the student to the db
+    }
+
+    @Override
+    public Student findById(Integer id) {
+        return entityManger.find(Student.class, id);
     }
 }

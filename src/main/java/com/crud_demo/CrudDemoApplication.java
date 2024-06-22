@@ -15,11 +15,12 @@ public class CrudDemoApplication {
 	}
 
 	//When Spring Boot application starts, it looks for beans of type CommandLineRunner and runs them
-	@Bean //to perform some setup or initialization tasks
+	@Bean //to perform some setup or initialization tasks - inject StudentDao
 	public CommandLineRunner commandLineRunner(StudentDAO studentDAO){
 		//lambda expression
 		return runner -> {
-			createStudent(studentDAO);
+			//createStudent(studentDAO);
+			getStudent(studentDAO);
 		};
 	}
 	private void createStudent(StudentDAO studentDAO) {
@@ -34,4 +35,7 @@ public class CrudDemoApplication {
 		//display the id of saved student
 		System.out.println("id : " + student.getId());
 	};
+	private void getStudent(StudentDAO studentDAO){
+		System.out.println(studentDAO.findById(1));
+	}
 }
