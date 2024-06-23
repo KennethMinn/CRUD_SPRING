@@ -1,5 +1,4 @@
 package com.crud_demo.entity;
-
 import jakarta.persistence.*;
 
 @Entity
